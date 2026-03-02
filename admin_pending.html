@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card shadow-sm">
+  <div class="card-body">
+    <div class="d-flex justify-content-between align-items-center">
+      <div>
+        <div class="fw-bold">Aprovar agendamentos</div>
+        <div class="small text-muted">Pedidos do link público entram como <b>Pendente</b>.</div>
+      </div>
+      <a class="btn btn-outline-secondary btn-sm" href="/">Voltar</a>
+    </div>
+    <hr>
+    <button class="btn btn-dark btn-sm" id="btnLoadPending">Atualizar</button>
+    <div class="table-responsive mt-3">
+      <table class="table table-sm align-middle" id="tblPending">
+        <thead><tr><th>Data/Hora</th><th>Barbeiro</th><th>Cliente</th><th>Serviço</th><th>Valor</th><th>Ações</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="alert alert-danger mt-3 d-none" id="pErr"></div>
+  </div>
+</div>
+{% endblock %}
