@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card shadow-sm">
+  <div class="card-body">
+    <div class="d-flex justify-content-between align-items-center">
+      <div>
+        <div class="fw-bold">Admin • Usuários & Permissões</div>
+        <div class="small text-muted">Aprovar barbeiro, liberar acessos, comissão e troca de senha.</div>
+      </div>
+      <a class="btn btn-outline-secondary btn-sm" href="/">Voltar</a>
+    </div>
+    <hr>
+    <div class="table-responsive">
+      <table class="table table-sm align-middle" id="tblUsers">
+        <thead>
+          <tr>
+            <th>Nome</th><th>Usuário</th><th>Role</th><th>Aprovado</th>
+            <th>Clientes</th><th>Serviços</th><th>Financeiro</th><th>Ver agendas</th><th>Aprovar</th>
+            <th>Comissão %</th><th>Senha</th><th>Ações</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <hr>
+    <div class="fw-bold mb-2">Criar novo usuário</div>
+    <div class="row g-2">
+      <div class="col-12 col-md-3"><input class="form-control form-control-sm" id="nuName" placeholder="Nome"></div>
+      <div class="col-12 col-md-2"><input class="form-control form-control-sm" id="nuUser" placeholder="username"></div>
+      <div class="col-12 col-md-2"><input class="form-control form-control-sm" id="nuPass" placeholder="senha"></div>
+      <div class="col-12 col-md-2">
+        <select class="form-select form-select-sm" id="nuRole">
+          <option value="barber">barber</option>
+          <option value="admin">admin</option>
+        </select>
+      </div>
+      <div class="col-12 col-md-3"><button class="btn btn-dark btn-sm w-100" id="btnCreateUser">Criar</button></div>
+    </div>
+    <div class="alert alert-danger mt-3 d-none" id="uErr"></div>
+    <div class="alert alert-success mt-3 d-none" id="uOk"></div>
+  </div>
+</div>
+{% endblock %}
