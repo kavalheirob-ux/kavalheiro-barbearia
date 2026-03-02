@@ -1,4 +1,4 @@
-# Sistema de Gestão — Cavalheiro Barbearia (v4)
+# Sistema de Gestão — Kavalheiro Barbearia (v4)
 Inclui:
 - Agenda (dia/semana) + financeiro básico (se permitido)
 - Agendamento online (estilo Calendly): clientes veem horários disponíveis e enviam pedido (status **Pendente**)
